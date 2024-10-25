@@ -1,3 +1,4 @@
+// ЗАДАНИЕ №1
 class Budget
 {
     static void Main()
@@ -33,5 +34,39 @@ class Budget
         Console.WriteLine($"Общие расходы: {total}");
         Console.WriteLine($"Ваш доход: {income}");
         Console.WriteLine($"Оставшиеся средства: {balance}");
+    }
+}
+
+// ЗАДАНИЕ №2
+using System;
+class Health
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите ваши данные: ");
+
+        Console.Write("Вес (кг): ");
+        double weight = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Рост (м): ");
+        double height = Convert.ToDouble(Console.ReadLine());
+       
+        double bmi = weight / (height * height);
+        
+        Console.WriteLine($"\nВаш ИМТ: {bmi:F2}");
+       
+        if (bmi < 18.5)
+        {
+            Console.WriteLine("Малый вес");
+        }
+        else if (bmi >= 18.5 && bmi < 24.9)
+        {
+            Console.WriteLine("Норма");
+        }
+        else if (bmi >= 25 && bmi < 29.9)
+        {
+            Console.WriteLine("Избыток веса");
+        }
+       
     }
 }
