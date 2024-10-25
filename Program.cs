@@ -45,10 +45,10 @@ class Health
     {
         Console.WriteLine("Введите ваши данные: ");
 
-        Console.Write("Вес (кг): ");
+        Console.Write("Вес: ");
         double weight = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("Рост (м): ");
+        Console.Write("Рост: ");
         double height = Convert.ToDouble(Console.ReadLine());
        
         double bmi = weight / (height * height);
@@ -68,5 +68,32 @@ class Health
             Console.WriteLine("Избыток веса");
         }
        
+    }
+}
+
+// ЗАДАНИЕ №3
+using System;
+
+class Calculator
+{
+    static void Main()
+    {
+        Console.WriteLine("Калькулятор");
+
+        Console.Write("Введите сумму: ");
+        decimal amount = Convert.ToDecimal(Console.ReadLine());
+
+        Console.Write("Введите срок: ");
+        int months = Convert.ToInt32(Console.ReadLine());
+
+        if (months <= 0)
+        {
+            Console.WriteLine("Больше нуля.");
+            return;
+        }
+        
+        decimal Savings = amount / months;
+        
+        Console.WriteLine($"\nЧтобы накопить {amount:C} за {months} месяцев, откладывайте {Savings:C} каждый месяц.");
     }
 }
