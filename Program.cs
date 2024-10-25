@@ -97,3 +97,35 @@ class Calculator
         Console.WriteLine($"\nЧтобы накопить {amount:C} за {months} месяцев, откладывайте {Savings:C} каждый месяц.");
     }
 }
+
+// ЗАДАНИЕ №4
+using System;
+class Credit
+{
+    static void Main()
+    {
+        Console.Write("Сумма кредитов: ");
+        decimal totalCredits = Convert.ToDecimal(Console.ReadLine());
+
+        Console.Write("Сумма задолженностей: ");
+        decimal totalDebts = Convert.ToDecimal(Console.ReadLine());
+
+        Console.Write("Открытые кредиты: ");
+        int openCredits = Convert.ToInt32(Console.ReadLine());
+
+        decimal debtToCredit = totalDebts / totalCredits;
+
+        if (debtToCredit > 0.5m)
+        {
+            Console.WriteLine("Соотношение высокое");
+        }
+        else if (debtToCredit >= 0.3m)
+        {
+            Console.WriteLine("Соотношенеи нормальное");
+        }
+        else
+        {
+            Console.WriteLine("Соотношение низкое");
+        }
+    }
+}
