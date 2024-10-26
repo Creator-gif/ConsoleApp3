@@ -3,32 +3,23 @@ class Budget
 {
     static void Main()
     {
-        // Расходы
-        Console.WriteLine("Введите ваши расходы:");
-
+        Console.WriteLine("Расходы:");
         Console.Write("Аренда квартиры: ");
         decimal rent = Convert.ToDecimal(Console.ReadLine());
-
         Console.Write("Пропитание: ");
         decimal food = Convert.ToDecimal(Console.ReadLine());
-
         Console.Write("Транспорт: ");
         decimal transport = Convert.ToDecimal(Console.ReadLine());
-        
         Console.Write("Коммунальные услуги: ");
         decimal service = Convert.ToDecimal(Console.ReadLine());
-
         Console.Write("ЖЭК: ");
         decimal JEK = Convert.ToDecimal(Console.ReadLine());
 
-        // Сумма
         decimal total = rent + food + transport + service + JEK;
 
-        // Доход
-        Console.Write("Введите ваш ежемесячный доход: ");
+        Console.Write("Доход: ");
         decimal income = Convert.ToDecimal(Console.ReadLine());
 
-        // Баланс
         decimal balance = income - total;
 
         Console.WriteLine($"Общие расходы: {total}");
@@ -79,10 +70,8 @@ class Calculator
     static void Main()
     {
         Console.WriteLine("Калькулятор");
-
         Console.Write("Введите сумму: ");
         decimal amount = Convert.ToDecimal(Console.ReadLine());
-
         Console.Write("Введите срок: ");
         int months = Convert.ToInt32(Console.ReadLine());
 
@@ -94,7 +83,7 @@ class Calculator
         
         decimal Savings = amount / months;
         
-        Console.WriteLine($"\nЧтобы накопить {amount:C} за {months} месяцев, откладывайте {Savings:C} каждый месяц.");
+        Console.WriteLine("Чтобы накопить вашу сумму, копить по " + savings + " в месяц");
     }
 }
 
@@ -127,5 +116,32 @@ class Credit
         {
             Console.WriteLine("Соотношение низкое");
         }
+    }
+}
+
+// Задание №5
+class Budget
+{
+    static void Main()
+    {
+        Console.Write("Аренда сноуборда: ");
+        decimal rentSnow = Convert.ToDecimal(Console.ReadLine());
+        Console.Write("Аренда лыжи: ");
+        decimal rentSkies = Convert.ToDecimal(Console.ReadLine());
+        Console.Write("Сколько дней: ");
+        decimal days = Convert.ToDecimal(Console.ReadLine());
+        Console.Write("Страховка: ");
+        decimal service = Convert.ToDecimal(Console.ReadLine());
+
+        decimal total = (rentSnow + rentSkies + service) * days;
+
+        Console.Write("Бюджет: ");
+        decimal budjet = Convert.ToDecimal(Console.ReadLine());
+
+        decimal balance = budjet - total;
+
+        Console.WriteLine($"Общие расходы: {total}");
+        Console.WriteLine($"Ваш бюджет: {budjet}");
+        Console.WriteLine($"Остаток: {balance}");
     }
 }
