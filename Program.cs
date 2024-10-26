@@ -93,7 +93,7 @@ class Credit
     {
         Console.Write("Сумма кредитов: ");
         decimal totalCredits = Convert.ToDecimal(Console.ReadLine());
-        Console.Write("Сумма задолженностей: ");
+        Console.Write("Все задолжности: ");
         decimal totalDebts = Convert.ToDecimal(Console.ReadLine());
         Console.Write("Открытые кредиты: ");
         int openCredits = Convert.ToInt32(Console.ReadLine());
