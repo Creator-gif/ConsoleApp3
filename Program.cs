@@ -35,10 +35,8 @@ class Health
     static void Main()
     {
         Console.WriteLine("Введите ваши данные: ");
-
         Console.Write("Вес: ");
         double weight = Convert.ToDouble(Console.ReadLine());
-
         Console.Write("Рост: ");
         double height = Convert.ToDouble(Console.ReadLine());
        
@@ -95,10 +93,8 @@ class Credit
     {
         Console.Write("Сумма кредитов: ");
         decimal totalCredits = Convert.ToDecimal(Console.ReadLine());
-
         Console.Write("Сумма задолженностей: ");
         decimal totalDebts = Convert.ToDecimal(Console.ReadLine());
-
         Console.Write("Открытые кредиты: ");
         int openCredits = Convert.ToInt32(Console.ReadLine());
 
@@ -140,8 +136,8 @@ class Budget
 
         decimal balance = budjet - total;
 
-        Console.WriteLine($"Общие расходы: {total}");
-        Console.WriteLine($"Ваш бюджет: {budjet}");
+        Console.WriteLine($"Расход: {total}");
+        Console.WriteLine($"Бюджет: {budjet}");
         Console.WriteLine($"Остаток: {balance}");
     }
 }
