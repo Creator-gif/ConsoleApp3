@@ -34,7 +34,7 @@ class Health
 {
     static void Main()
     {
-        Console.WriteLine("Введите ваши данные: ");
+        Console.WriteLine("Данные: ");
         Console.Write("Вес: ");
         double weight = Convert.ToDouble(Console.ReadLine());
         Console.Write("Рост: ");
